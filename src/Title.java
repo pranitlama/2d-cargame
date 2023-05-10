@@ -3,6 +3,8 @@ import javax.swing.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
+
 public class Title extends JFrame implements ActionListener {
 
 
@@ -67,7 +69,12 @@ public class Title extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == startButton) {
-            Gamegui gui= new Gamegui();
+            try {
+                Gamegui gui= new Gamegui();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            this.dispose();
 
 //            gui.setVisible(true);
 

@@ -1,10 +1,11 @@
 import javax.swing.*;
+import java.io.IOException;
 
 public class Gamegui {
     JFrame frame;
 //    Car car;
     Road road;
-    Gamegui(){
+    Gamegui() throws IOException {
         frame=new JFrame("Car game");
 //        frame.setSize(400,700);
 //        car=new Car();
